@@ -1,0 +1,8 @@
+setup.py
+/home/whu/HDD_16T/timer/gmq/video/ours/dcn/src/deform_conv_cuda.cpp
+/home/whu/HDD_16T/timer/gmq/video/ours/dcn/src/deform_conv_cuda_kernel.cu
+/home/whu/HDD_16T/timer/gmq/video/ours/dcn/src/deform_conv_ext.cpp
+deform_conv.egg-info/PKG-INFO
+deform_conv.egg-info/SOURCES.txt
+deform_conv.egg-info/dependency_links.txt
+deform_conv.egg-info/top_level.txt

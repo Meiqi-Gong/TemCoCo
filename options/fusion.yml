@@ -1,0 +1,157 @@
+name: VideoFusion_IRnoise2
+model_type: VideoFusionModel
+num_gpu: 1
+scale: 1
+root_path: /home/whu/HDD_16T/timer/gmq/video/ours
+path:
+  pretrain_network_g: 
+  strict_load_g: true
+  resume_state: ~
+
+logger:
+  print_freq: 50
+  save_checkpoint_freq: 1000
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
+datasets:
+  train:
+    name: MS3V
+    type: VideoFusionDataset
+    # dataroot_gt_vi: /home/whu/HDD_16T/timer/gmq/video/ours/HDO2/train/vi
+    # dataroot_lq_vi: /home/whu/HDD_16T/timer/gmq/video/ours/HDO2/train/vi_blur
+    # dataroot_gt_ir: /home/whu/HDD_16T/timer/gmq/video/ours/HDO2/train/ir
+    # dataroot_lq_ir: /home/whu/HDD_16T/timer/gmq/video/ours/HDO2/train/ir_deg
+    # meta_info_file_train: /home/whu/HDD_16T/timer/gmq/video/ours/HDO2/train/meta_info_file_train.txt
+    # dataroot_gt_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/train/VI
+    # dataroot_lq_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/train/VI_deg
+    # dataroot_gt_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/train/IR
+    # dataroot_lq_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/train/IR_deg
+    # meta_info_file_train: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/train/meta_info_file_test.txt
+    dataroot_gt_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/train/order/VI_en
+    dataroot_lq_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/train/order/VI_blur_new
+    dataroot_gt_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/train/order/IR_en
+    dataroot_lq_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/train/order/IR_noise2
+    meta_info_file_train: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/train/order/meta_info_file_train.txt
+    # dataroot_gt_vi: /home/whu/HDD_16T/timer/gmq/video/ours/Video0117/VI_en
+    # dataroot_lq_vi: /home/whu/HDD_16T/timer/gmq/video/ours/Video0117/VI_blur
+    # dataroot_gt_ir: /home/whu/HDD_16T/timer/gmq/video/ours/Video0117/IR_en
+    # dataroot_lq_ir: /home/whu/HDD_16T/timer/gmq/video/ours/Video0117/IR_noise
+    # meta_info_file_train: /home/whu/HDD_16T/timer/gmq/video/ours/Video0117/IR_noise/meta_info_file_train.txt
+    test_mode: False
+    io_backend:
+      type: disk
+
+    num_frame: 10
+    gt_size: 224
+    interval_list: [1]
+    random_reverse: false
+    use_flip: true
+    use_rot: true
+
+    # data loader
+    use_shuffle: true
+    num_worker_per_gpu: 4
+    batch_size_per_gpu: 3
+    dataset_enlarge_ratio: 1
+    prefetch_mode: ~
+
+  # val:
+  #   name: MS3V
+  #   type: VideoFusionTestDataset
+    
+  #   # dataroot_gt: /data/timer/VideoFusion/datasets/HDO2/val/vi
+  #   # dataroot_lq: /data/timer/VideoFusion/datasets/HDO2/val/vi_blur
+
+  #   # dataroot_gt_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/val/VI
+  #   # dataroot_lq_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/val/VI_deg
+  #   # dataroot_gt_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/val/IR
+  #   # dataroot_lq_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/val/IR_deg
+  #   # meta_info_file_val: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/val/meta_info_file_val.txt
+  #   dataroot_gt_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/test/order/VI_en
+  #   dataroot_lq_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/test/order/VI_blur
+  #   dataroot_gt_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/test/order/IR_en
+  #   dataroot_lq_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/test/order/IR_noise
+  #   meta_info_file_val: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/test/order/meta_info_file_test.txt
+  #   test_mode: Val
+
+  #   cache_data: false
+  #   io_backend:
+  #     type: disk
+
+  #   num_frame: 4
+  #   num_overlap: 0
+
+  test:
+    name: MS3V
+    type: VideoFusionTestDataset
+
+    # dataroot_gt_vi: /home/whu/HDD_16T/timer/gmq/video/ours/HDO2/test/vi
+    # dataroot_lq_vi: /home/whu/HDD_16T/timer/gmq/video/ours/HDO2/test/vi_blur
+    # dataroot_gt_ir: /home/whu/HDD_16T/timer/gmq/video/ours/HDO2/test/ir
+    # dataroot_lq_ir: /home/whu/HDD_16T/timer/gmq/video/ours/HDO2/test/ir_noise
+    # meta_info_file_val: /home/whu/HDD_16T/timer/gmq/video/ours/HDO2/test/meta_info_file_test.txt
+    # dataroot_gt_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/test/order/VI_en
+    # dataroot_lq_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/test/order/VI_blur_new
+    # dataroot_gt_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/test/order/IR_en
+    # dataroot_lq_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/test/order/IR_noise2
+    # dataroot_gt_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/train/VI
+    # dataroot_lq_vi: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/train/VI_deg
+    # dataroot_gt_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/train/IR
+    # dataroot_lq_ir: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/train/IR_deg
+    # meta_info_file_val: /home/whu/HDD_16T/timer/gmq/video/ours/MS3V/new/test/order/meta_info_file_test.txt
+    dataroot_gt_vi: /home/whu/HDD_16T/timer/gmq/video/ours/Video0117/VI_en
+    dataroot_lq_vi: /home/whu/HDD_16T/timer/gmq/video/ours/Video0117/VI_blur
+    dataroot_gt_ir: /home/whu/HDD_16T/timer/gmq/video/ours/Video0117/IR_en
+    dataroot_lq_ir: /home/whu/HDD_16T/timer/gmq/video/ours/Video0117/IR_noise
+    meta_info_file_val: /home/whu/HDD_16T/timer/gmq/video/ours/Video0117/IR_noise/meta_info_file_train.txt
+    test_mode: True
+
+    cache_data: false
+    io_backend:
+      type: disk
+
+    num_frame: 30
+    num_overlap: 5
+
+train:
+  optim_g:
+    type: AdamW
+    lr: !!float 5e-4 #2.47355829049063e-28 #5e-4 #2.0385e-6 #
+    weight_decay: !!float 1e-4
+    betas: [0.9, 0.999]
+
+  scheduler:
+    type: CosineAnnealingRestartLR
+    periods: [500000]
+    restart_weights: [1]
+    eta_min: !!float 1e-6
+
+  total_iter: 500000  
+  warmup_iter: 5000  # no warm up
+
+  # losses
+  fusion_opt:
+    type: Fusion_loss
+
+  fidelity_opt:
+    type: Fidelity_loss
+
+val:
+  val_freq: 1000
+  flip_seq: false
+  save_img: true
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: true
+
+network_g:
+  type: VideoFusion
+  in_channels: 3
+  num_features: 64
+  out_channels: 3
