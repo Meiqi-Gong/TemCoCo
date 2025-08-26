@@ -38,7 +38,7 @@ class Fusion_loss(nn.Module):
         loss_temp_consist = temp_weight*self.cos_consist(Y_f.reshape(b,t,1,h,w).squeeze(2).reshape(b,t,h*w), 
                                         Y_ir.reshape(b,t,1,h,w).squeeze(2).reshape(b,t,h*w))
 
-        loss_ssim = ssim_weight * (self.loss_func_ssim(img_vi, img_f) + ssim_ir_weight * self.loss_func_ssim(Y_ir, Y_f))
+        loss_ssim = ssim_weight * (self.loss_func_ssim(Y_vi, Y_f) + ssim_ir_weight * self.loss_func_ssim(Y_ir, Y_f))
         loss_max = int_weight * self.loss_func_max(Y_f, Y_vi, Y_ir)
         loss_consist = consist_weight * self.loss_func_consist(Y_f, Y_vi, Y_ir, ir_compose)
         loss_color = color_weight * self.loss_func_color(Cb_f, Cr_f, Cb_vi, Cr_vi)
