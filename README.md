@@ -10,7 +10,7 @@ CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=7542 train_di
 ```
   or run with single GPU
 ```bash
-CUDA_VISIBLE_DEVICES=0 python train_dist_iso.py --opt options/fusion.yml
+CUDA_VISIBLE_DEVICES=0 python train.py --opt options/fusion.yml
 ```
 
 #### To test with the pre-trained model:<br>
