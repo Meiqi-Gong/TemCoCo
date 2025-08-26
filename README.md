@@ -8,7 +8,7 @@ Tips
   or CUDA_VISIBLE_DEVICES=0 python train_dist_iso.py --opt options/fusion.yml
 
 #### To test with the pre-trained model:<br>
-* Run test_folder.py.
+* Run test_folder.py
 
 If this work is helpful to you, please cite it as:
 ```
