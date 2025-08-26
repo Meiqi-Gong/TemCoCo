@@ -4,7 +4,9 @@ Code of [TemCoCo: Temporally Consistent Multi-modal Video Fusion with Visual-Sem
 Tips
 ---------
 #### To train:<br>
-* Fllow run_command.txt to run CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=7542 train_dist.py --opt options/fusion.yml --launcher pytorch
+* Fllow run_command.txt to run ```bash
+CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=7542 train_dist.py --opt options/fusion.yml --launcher pytorch
+```
   or CUDA_VISIBLE_DEVICES=0 python train_dist_iso.py --opt options/fusion.yml
 
 #### To test with the pre-trained model:<br>
