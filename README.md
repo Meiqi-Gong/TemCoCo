@@ -1,8 +1,6 @@
 # TemCoCo
 Code of [TemCoCo: Temporally Consistent Multi-modal Video Fusion with Visual-Semantic Collaboration]([https://www.sciencedirect.com/science/article/pii/S1077314222000352](https://arxiv.org/abs/2508.17817))
 
-![演示动画](./examples/1207_1739.gif)
-
 Tips
 ---------
 #### To train:<br>
