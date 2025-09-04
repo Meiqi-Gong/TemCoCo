@@ -30,3 +30,9 @@ If this work is helpful to you, please cite it as:
 }
 ```
 If you have any question, please email to me (meiqigong@whu.edu.cn).
+
+---
+
+### Acknowledgement
+We sincerely thank the authors of [SEA-RAFT](https://github.com/princeton-vl/SEA-RAFT) for their great contribution.  
+Our flowD metric is computed based on their implementation, and it is compatible with any other optical flow estimation algorithm.
