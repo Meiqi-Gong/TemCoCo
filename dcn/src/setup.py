@@ -2,7 +2,8 @@ import os
 from torch.utils.cpp_extension import CppExtension, BuildExtension, CUDAExtension
 from setuptools import setup, find_packages
 
-module_path = "/home/whu/HDD_16T/timer/gmq/video/ours/dcn/"  # 修改为实际的路径
+# module_path = "/home/whu/HDD_16T/timer/gmq/video/ours/dcn/"  # 修改为实际的路径
+module_path = "/media/wit/d6be899d-fef8-4fdb-b9e7-0adf3c03333a/timer/gmq/video/TemCoCoPlusPlus/dcn/"
 
 # 这里是你要编译的 C++ 和 CUDA 源文件
 sources = [
