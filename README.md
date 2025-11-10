@@ -19,8 +19,8 @@ CUDA_VISIBLE_DEVICES=0 python train.py --opt options/fusion.yml
 python test_folder.py --opt options/fusion.yml
 ```
 
-Regarding the DCN runtime environment:
-enter the src folder and run the command ```bash   pip install -e .  ```
+#### Regarding the DCN runtime environment:
+enter the src folder and run the command ``` pip install -e .  ```
 
 If this work is helpful to you, please cite it as:
 ```
