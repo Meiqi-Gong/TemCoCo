@@ -20,7 +20,7 @@ python test_folder.py --opt options/fusion.yml
 ```
 
 #### Regarding the DCN runtime environment:
-enter the src folder and run the command ``` pip install -e .  ```
+Enter the dcn/src folder and run the command ``` pip install -e .  ```
 
 If this work is helpful to you, please cite it as:
 ```
