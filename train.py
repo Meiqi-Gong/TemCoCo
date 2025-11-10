@@ -26,8 +26,12 @@ opt = parse_options(root_path, is_train=True)
 from torchvision.models import vgg19
 vgg = vgg19(pretrained=True).features.cuda()#.to(local_rank)
 
-DINOv2_model = torch.hub.load('/home/whu/HDD_16T/timer/gmq/video/dinov2-main/', 'dinov2_vitl14', pretrained=True, source='local').cuda()
-DINOv2_model.eval()
+# DINOv2_model = torch.hub.load('/home/whu/HDD_16T/timer/gmq/video/dinov2-main/', 'dinov2_vitl14', pretrained=True, source='local').cuda()
+# DINOv2_model.eval()
+
+DINOv2_model = torch.hub.load('facebookresearch/dinov2', 'dinov2_vitl14', pretrained=True)
+DINOv2_model.eval().cuda()
+
 vgg.eval()
 for param in DINOv2_model.parameters():
     param.requires_grad = False
