@@ -1,4 +1,4 @@
-<h1 align="center">[TemCoCo: Temporally Consistent Multi-modal Video Fusion with Visual-Semantic Collaboration]([https://www.sciencedirect.com/science/article/pii/S1077314222000352](https://arxiv.org/abs/2508.17817))</h1>
+<h1 align="center">TemCoCo: Temporally Consistent Multi-modal Video Fusion with Visual-Semantic Collaboration</h1>
 
 Tips
 ---------
