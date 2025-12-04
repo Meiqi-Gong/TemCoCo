@@ -24,7 +24,7 @@ python test_folder.py --opt options/fusion.yml
 ## Regarding the DCN runtime environment:
 Enter the dcn/src folder and run the command ``` pip install -e .  ```
 
-# If this work is helpful to you, please cite it as:
+### If this work is helpful to you, please cite it as:
 ```
 @inproceedings{gong2025temcoco,
   title={Temcoco: Temporally consistent multi-modal video fusion with visual-semantic collaboration},
