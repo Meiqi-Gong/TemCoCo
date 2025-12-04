@@ -24,12 +24,12 @@ Enter the dcn/src folder and run the command ``` pip install -e .  ```
 
 If this work is helpful to you, please cite it as:
 ```
-@article{gong2025temcoco,
-  title={TemCoCo: Temporally Consistent Multi-modal Video Fusion with Visual-Semantic Collaboration},
+@inproceedings{gong2025temcoco,
+  title={Temcoco: Temporally consistent multi-modal video fusion with visual-semantic collaboration},
   author={Gong, Meiqi and Zhang, Hao and Yi, Xunpeng and Tang, Linfeng and Ma, Jiayi},
-  journal={arXiv preprint arXiv:2508.17817},
-  year={2025},
-  note={Accepted by ICCV 2025}
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={14326--14335},
+  year={2025}
 }
 ```
 If you have any question, please email to me (meiqigong@whu.edu.cn).
