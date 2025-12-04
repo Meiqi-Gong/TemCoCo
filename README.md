@@ -4,7 +4,6 @@
   <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Gong_TemCoCo_Temporally_Consistent_Multi-modal_Video_Fusion_with_Visual-Semantic_Collaboration_ICCV_2025_paper.html">Paper</a>
 </p>
 
-Tips
 ---------
 ## To train:<br>
 * Fllow run_command.txt to run with multiple GPUs
@@ -16,13 +15,13 @@ CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=7542 train_di
 CUDA_VISIBLE_DEVICES=0 python train.py --opt options/fusion.yml
 ```
 
-#### To test with the pre-trained model:<br>
+## To test with the pre-trained model:<br>
 * Run
 ```bash
 python test_folder.py --opt options/fusion.yml
 ```
 
-#### Regarding the DCN runtime environment:
+## Regarding the DCN runtime environment:
 Enter the dcn/src folder and run the command ``` pip install -e .  ```
 
 If this work is helpful to you, please cite it as:
