@@ -6,6 +6,23 @@
 </p>
 
 ---------
+## Video Results
+
+<table>
+  <tr>
+    <td align="center">
+      <video src="examples/1207_1714.mp4" controls muted loop width="420"></video>
+      <br>
+      <a href="examples/1207_1714.mp4">1207_1714.mp4</a>
+    </td>
+    <td align="center">
+      <video src="examples/1207_1739.mp4" controls muted loop width="420"></video>
+      <br>
+      <a href="examples/1207_1739.mp4">1207_1739.mp4</a>
+    </td>
+  </tr>
+</table>
+
 ## To train:<br>
 * Fllow run_command.txt to run with multiple GPUs
 ```bash
