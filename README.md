@@ -8,17 +8,18 @@
 ---------
 ## Video Results
 
-<table>
+<table width="100%">
   <tr>
     <td align="center">
-      <img src="examples/1207_1714.gif" width="420" alt="1207_1714 video result">
+      <img src="examples/1207_1714.gif" width="100%" alt="1207_1714 video result">
       <br>
       <a href="examples/1207_1714.mp4">1207_1714.mp4</a>
     </td>
   </tr>
+  <tr><td height="20"></td></tr>
   <tr>
     <td align="center">
-      <img src="examples/1207_1739.gif" width="420" alt="1207_1739 video result">
+      <img src="examples/1207_1739.gif" width="100%" alt="1207_1739 video result">
       <br>
       <a href="examples/1207_1739.mp4">1207_1739.mp4</a>
     </td>
