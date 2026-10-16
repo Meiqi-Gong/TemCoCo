@@ -15,6 +15,8 @@ def flowD(preoutput_img, output_img, pretarget_img, target_img):
     """
     flow = flow_evaluator.run(target_img, pretarget_img) #must first resize image to (432, 960) before flow calculation
     warp_image = flow_evaluator.warp_frame_with_flow(preoutput_img, flow)
+    output_img = output_img.astype(np.float32)
+    warp_image = warp_image.astype(np.float32)
     OF_diff = np.absolute(output_img - warp_image)
     OF_diff = np.sqrt(np.sum(OF_diff * OF_diff, axis = -1))
     return  OF_diff.mean()
