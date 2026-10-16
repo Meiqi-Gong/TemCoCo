@@ -77,6 +77,17 @@ class SEA_RAFT_Evaluator:
         flow2 = FF.resize(flow, (w//2, h//2))
         return flow1, flow2
 
+    def warp_frame_with_flow(self, frame1, flow):
+        h, w = flow.shape[:2]
+        
+        x, y = np.meshgrid(np.arange(w), np.arange(h))
+        coords_x = (x + flow[..., 0]).astype(np.float32)
+        coords_y = (y + flow[..., 1]).astype(np.float32)
+        
+        warped_frame = cv2.remap(frame1, coords_x, coords_y, interpolation=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
+        
+        return warped_frame
+
 
 # 调用类进行评估
 if __name__ == '__main__':
