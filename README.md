@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Gong_TemCoCo_Temporally_Consistent_Multi-modal_Video_Fusion_with_Visual-Semantic_Collaboration_ICCV_2025_paper.html"><img src="https://img.shields.io/badge/Paper-ICCV_2025-blue" alt="ICCV 2025 paper"></a> |
-  <a href="examples/"><img src="https://img.shields.io/badge/Dataset-M3SVD-orange" alt="Video results"></a>
+  <a href="examples/"><img src="https://img.shields.io/badge/Video results-orange" alt="Video results"></a>
 </p>
 
 
