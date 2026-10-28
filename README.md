@@ -1,9 +1,10 @@
 <h1 align="center">TemCoCo: Temporally Consistent Multi-modal Video Fusion with Visual-Semantic Collaboration</h1>
 
 <p align="center">
-  <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Gong_TemCoCo_Temporally_Consistent_Multi-modal_Video_Fusion_with_Visual-Semantic_Collaboration_ICCV_2025_paper.html">Paper</a> |
+  <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Gong_TemCoCo_Temporally_Consistent_Multi-modal_Video_Fusion_with_Visual-Semantic_Collaboration_ICCV_2025_paper.html"><img src="https://img.shields.io/badge/Paper-ICCV_2025-blue" alt="ICCV 2025 paper"></a> |
   <a href="examples/">Video results</a>
 </p>
+
 
 ---------
 ## Video Results
